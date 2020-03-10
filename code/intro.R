@@ -2,6 +2,9 @@ library(dplyr)
 library(readr)
 library(here)
 
+
+# Dados de salários em TI -------------------------------------------------
+
 # lendo arquivo de dados
 salarios <- read_csv(here("data/salarios-ti-formatted.csv"))
 
@@ -41,17 +44,18 @@ ggplot(salarios, aes(Horas.Diarias)) + geom_histogram(binwidth = 0.5)
 
 # gŕafico de barras
 
-# lendo segundo arquivo de dados
-lifeExp <- read.table(here("data/LifeExpTable.txt"))
+
+# Dados da turma ----------------------------------------------------------
 
 # ler dados dos alunos
 # renomear colunas
 # explorar dados
 
-
-# Qual o número de homens e mulheres
 # Quais são as áreas de interesse?
 # Qual a idade média da turma
 # Qual o percentual da turma que faz doutorado
 # Qual o percentual da turma que são da ufcg (entre homens e mulheres)
 # Quem programa em R?
+
+# Qual o número de homens e mulheres
+# Existe diferença de altura (idade, # irmãos) entre homens e mulheres?
