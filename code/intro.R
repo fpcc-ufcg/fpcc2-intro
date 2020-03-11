@@ -2,6 +2,9 @@ library(dplyr)
 library(readr)
 library(here)
 
+
+# Dados de salários em TI -------------------------------------------------
+
 # lendo arquivo de dados
 salarios <- read_csv(here("data/salarios-ti-formatted.csv"))
 
@@ -84,10 +87,9 @@ fpcc2 %>% filter(!is.na(irmaos)) %>%
 fpcc2 %>% filter(!is.na(irmaos)) %>% group_by(sexo) %>% 
   summarise(media_irmaos = mean(as.numeric(irmaos)))
 
-
 # Outras perguntas --------------------------------------------------------
 
 # Quais são as áreas de interesse?
-# Qual a idade média da turma
+# Qual a idade média da turma?
 # Qual o percentual da turma que faz doutorado?
 # Qual o percentual da turma que são da ufcg (entre homens e mulheres)?
